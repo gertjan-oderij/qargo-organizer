@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qargo Organizer</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <h1>Qargo Organizer</h1>
+  </header>
+
+  <div id="current-tab">
+    <div id="tab-color-swatch"></div>
+    <span id="tab-hostname">Loading...</span>
+    <span id="tab-rule-label">no rule</span>
+  </div>
+
+  <div class="rules-list" id="rules-list">
+    <div class="empty-state">No rules configured yet.</div>
+  </div>
+
+  <footer>
+    <button id="open-options">Manage Rules</button>
+  </footer>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
