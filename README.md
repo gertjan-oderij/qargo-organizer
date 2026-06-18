@@ -1,6 +1,6 @@
 # Qargo Organizer
 
-A Chrome extension that visually tags Qargo environments in your tab favicons and titles to prevent accidental changes in the wrong environment.
+A browser extension (Chrome & Firefox) that visually tags Qargo environments in your tab favicons and titles to prevent accidental changes in the wrong environment.
 
 When you visit a URL that matches a configured rule, the extension:
 - Replaces the tab **favicon** with the Qargo logo recoloured in the rule's colour
@@ -12,28 +12,38 @@ When you visit a URL that matches a configured rule, the extension:
 
 > No technical experience required — just follow the steps below.
 
+The repository contains a separate, ready-to-load folder for each browser:
+
+| Browser | Folder |
+|---|---|
+| Chrome (and Edge/Brave/other Chromium browsers) | `chrome/` |
+| Firefox | `firefox/` |
+
 ### Step 1 — Download the extension
 
 1. Go to the [repository page](https://github.com/geroderij/qargo-organizer) on GitHub
 2. Click the green **Code** button → **Download ZIP**
 3. Unzip the downloaded file somewhere easy to find (e.g. your Desktop)
 
-### Step 2 — Open Chrome Extensions
+### Step 2 — Load it in your browser
 
-1. Open **Google Chrome**
-2. In the address bar, type `chrome://extensions` and press **Enter**
+#### Chrome / Edge / Brave
 
-### Step 3 — Enable Developer Mode
+1. In the address bar, type `chrome://extensions` and press **Enter**
+2. Toggle on **Developer mode** (top-right corner)
+3. Click **Load unpacked** (top-left)
+4. Select the **`chrome`** folder inside the unzipped `qargo-organizer` folder
 
-In the top-right corner of the Extensions page, toggle on **Developer mode**.
+#### Firefox
 
-### Step 4 — Load the extension
+1. In the address bar, type `about:debugging` and press **Enter**
+2. Click **This Firefox** in the left sidebar
+3. Click **Load Temporary Add-on…**
+4. Open the **`firefox`** folder inside the unzipped `qargo-organizer` folder and select its **`manifest.json`**
 
-1. Click the **Load unpacked** button that appears in the top-left
-2. In the file picker, navigate to and select the unzipped `qargo-organizer` folder
-3. Click **Select** (or **Open**)
+> Note: Firefox unloads temporary add-ons when it restarts, so you'll need to load it again after relaunching. A permanently installed, signed version can be distributed via [addons.mozilla.org](https://addons.mozilla.org) later.
 
-The extension is now installed. You'll see the Qargo Organizer icon appear in your Chrome toolbar.
+The extension is now installed. You'll see the Qargo Organizer icon appear in your browser toolbar.
 
 ---
 
@@ -69,6 +79,6 @@ To reset everything back to the defaults, click **Reset to Defaults**.
 When a new version is available:
 
 1. Download and unzip the new version (same as Step 1 above), replacing the old folder
-2. Go to `chrome://extensions`
-3. Find **Qargo Organizer** and click the **↺ refresh** icon
-4. Reload any open tabs you want the update to apply to
+2. **Chrome:** go to `chrome://extensions`, find **Qargo Organizer** and click the **↺ refresh** icon.
+   **Firefox:** go to `about:debugging` → **This Firefox**, and click **Reload** next to Qargo Organizer (or load it again if Firefox was restarted)
+3. Reload any open tabs you want the update to apply to
