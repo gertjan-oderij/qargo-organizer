@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qargo Organizer – Rules</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Qargo Organizer</h1>
+    <p class="subtitle">Define rules to color your browser tabs based on the site's hostname.</p>
+
+    <div class="card">
+      <div class="card-header">Rules</div>
+      <table>
+        <thead>
+          <tr>
+            <th style="width:20px"></th>
+            <th>Pattern</th>
+            <th>Label</th>
+            <th>Color</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="rules-body">
+        </tbody>
+      </table>
+      <p class="hint">
+        Patterns match the tab's <strong>hostname</strong>. Use <code>*.example.com</code> to match subdomains,
+        <code>example*</code> for a prefix, or just <code>example.com</code> for an exact/subdomain match.
+      </p>
+    </div>
+
+    <div class="actions">
+      <button class="btn btn-secondary" id="add-rule">+ Add Rule</button>
+      <button class="btn btn-primary" id="save">Save</button>
+      <button class="btn btn-secondary" id="export">Export</button>
+      <button class="btn btn-secondary" id="import">Import</button>
+      <input type="file" id="import-file" accept=".json" style="display:none" />
+      <button class="btn btn-danger" id="reset">Reset to Defaults</button>
+      <span id="status-msg">Saved!</span>
+    </div>
+  </div>
+
+  <script type="module" src="options.js"></script>
+</body>
+</html>
